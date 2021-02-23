@@ -1,0 +1,22 @@
+ALGORITHM sentence
+VAR
+    i: INTEGER :=0;
+    ch:CHAR;
+    count_char: INTEGER :=0;
+    count_words: INTEGER :=1;
+    count_vowels: INTEGER :=0;    
+BEGIN
+    WRITE("Enter a sentence")
+    REPEAT
+        READ(ch);
+        count_char:=count_char+1;
+        IF (ch=' ') THEN
+            count_words:=count_words+1;
+        ELSE_IF (ch='a' OR ch='e' OR ch='u' OR ch='i' OR ch='o' OR ch='A' OR ch='E' OR ch='U' or ch='I' OR ch='O') THEN
+            count_vowels=count_vowels+1;
+        END_IF
+    UNTIL (ch<>'.')
+    WRITE ("The length of the sentence is", count_char);
+    WRITE ("The number of vowels is", count_vowels);
+    WRITE ("The number of words is", count_words);
+END
